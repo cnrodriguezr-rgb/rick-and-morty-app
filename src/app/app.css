@@ -1,0 +1,51 @@
+.container{
+  padding:40px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.title{
+  font-size:48px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+.subtitle{
+  color:#666;
+  margin-bottom:20px;
+}
+
+.search{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  margin-bottom:20px;
+}
+
+.count{
+  color:#666;
+  margin-bottom:20px;
+}
+
+.cards{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+
+.card{
+  width:200px;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  text-align:center;
+}
+
+.card img{
+  width:100%;
+}
+
+.card h3{
+  padding:10px;
+}
