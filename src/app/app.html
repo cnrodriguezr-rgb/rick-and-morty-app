@@ -1,25 +1,20 @@
 <section class="container">
-  <h1 class="title">
-    Arquitectura frontend lista para crecer sin mezclar UI con negocio.
-  </h1>
-
-  <p class="subtitle">
-    Base feature-first/domain-first con contratos claros entre pantalla, dominio y API.
-  </p>
+  <h1 class="title">Cristian Nolberto Rodriguez Rodriguez-UNINCCA</h1>
+  <p class="subtitle">Base feature-first/domain-first con contratos claros entre pantalla, dominio y API.</p>
 
   <input
     type="text"
     placeholder="Rick, Morty, Summer..."
-    [(ngModel)]="search"
     class="search"
+    [(ngModel)]="search"
   />
 
   <p class="count">{{ filteredCharacters.length }} personajes</p>
 
   <div class="cards">
-    <div class="card" *ngFor="let c of filteredCharacters">
-      <img [src]="c.image" [alt]="c.name" />
-      <h3>{{ c.name }}</h3>
+    <div class="card" *ngFor="let character of filteredCharacters">
+      <img [src]="character.image" [alt]="character.name" />
+      <h3>{{ character.name }}</h3>
     </div>
   </div>
 </section>
