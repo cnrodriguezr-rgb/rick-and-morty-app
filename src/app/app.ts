@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ApiService, Character } from './services/api';
 
@@ -15,7 +15,10 @@ export class App implements OnInit {
   filteredCharacters: Character[] = [];
   private _search = '';
 
-  constructor(private api: ApiService) {}
+  constructor(
+    private api: ApiService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   get search(): string {
     return this._search;
@@ -30,6 +33,7 @@ export class App implements OnInit {
     this.api.getCharacters().subscribe((data) => {
       this.characters = data.results;
       this.applyFilter();
+      this.cdr.detectChanges();
     });
   }
 
